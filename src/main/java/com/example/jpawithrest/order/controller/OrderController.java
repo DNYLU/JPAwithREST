@@ -45,7 +45,7 @@ public class OrderController {
   @GetMapping("/{id}")
   public ResponseEntity<Order> find(@PathVariable("id") Long id) {
     Optional<Order> item = Optional.of(service.find(id)
-        .orElseThrow(() -> new RuntimeException("Order %d not found.".formatted(id))));
+            .orElseThrow(() -> new RuntimeException("Order %d not found.".formatted(id))));
     return ResponseEntity.ok().body(item.get());
   }
 
