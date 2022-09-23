@@ -31,7 +31,7 @@ public class OrderController {
    */
   @GetMapping
   ResponseEntity<List<Order>> findAll() {
-    List<Order> all = (List<Order>) repository.findAll();
+    List<Order> all = (List<Order>) repository.findAll(); //Repository skal ikke være i Controller. Skift ud med 'service'
     return ResponseEntity.ok().body(all);
   }
 

@@ -28,9 +28,9 @@ app.get('/api/v1/customers', cors(), (req, res) => createResponse('../json/custo
 app.get('/api/v1/reservations', cors(), (req, res) => createResponse('../json/reservations.json', res));
 
 /**
- * Creates a response for a given local json file.
- * @param {*} jsonFile
- * @param {*} res
+ * Creates a response for a given local json file. 
+ * @param {*} jsonFile 
+ * @param {*} res 
  */
 function createResponse(jsonFile, res) {
     res.setHeader('Content-Type', 'application/json');
